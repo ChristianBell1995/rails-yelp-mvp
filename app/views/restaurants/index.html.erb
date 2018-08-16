@@ -1,0 +1,9 @@
+<h2>Here is a wonderful list of restaurants </h2>
+  <% @restaurants.each do |restaurant| %>
+    <div class="card">
+      <h4>Name: <%= restaurant.name %></h4>
+      <p>Category: <%= restaurant.category %></p>
+      <p><%= link_to "See Details", restaurant_path(restaurant), class: "btn btn-danger" %></p>
+    </div>
+  <% end %>
+  <p><%= link_to "Add a Restaurant?", new_restaurant_path %></p>
